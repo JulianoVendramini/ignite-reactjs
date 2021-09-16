@@ -1,5 +1,2 @@
-import React from 'react';
-
-function App(){
-    return <h1>Hello World</h1>
-}
+import { render } from 'react-dom';
+import { App } from './App'
