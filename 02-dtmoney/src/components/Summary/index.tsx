@@ -9,7 +9,7 @@ export function Summary(){
     <Container>
         <div>
             <header>
-                <p>entradas</p>
+                <p>Entradas</p>
                 <img src={incomeImg} alt="Entradas" />
             </header>
             <strong>R$1000,00</strong>
