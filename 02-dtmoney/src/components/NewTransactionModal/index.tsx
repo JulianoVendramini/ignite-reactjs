@@ -59,7 +59,8 @@ function hadleCreateNewTransaction(event : FormEvent){
             />
 
             <input 
-                type="number"
+                type="text" 
+                pattern="[0-9]*"
                 placeholder="Valor"
                 value={value}
                 onChange={(event) => setValue(Number(event.target.value))}
