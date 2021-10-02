@@ -9,8 +9,30 @@ import { GlobalStyle } from './styles/global';
 createServer({
   models: {
     transaction: Model,
-
   },
+
+seeds(server){
+  server.db.loadData({
+    transactions:[
+      {
+        id: 1,
+        title: 'Freelance de website',
+        type: 'deposit',
+        category: 'Dev',
+        amount: 6000,
+        createAt: new Date('2021-02-12 09:00:00')
+      },
+      {
+        id: 2,
+        title: 'Aluguel',
+        type: 'withdraw',
+        category: 'Casa',
+        amount: 1000,
+        createAt: new Date('2021-02-23 10:00:00')
+      }
+    ]
+  })
+},
 
   routes(){
     this.namespace = 'api'
