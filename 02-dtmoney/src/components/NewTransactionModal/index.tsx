@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import closeImg from '../../assets/close.svg';
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
+import { api } from '../../services/api';
 
 import { Container, RadioBox, TransactionTypeContainer } from './styles';
 
@@ -22,7 +23,14 @@ const [type, setType] = useState('deposit')
 
 function hadleCreateNewTransaction(event : FormEvent){
     event.preventDefault();
-    console.log(title, value, category);
+    const data = {
+        title, 
+        value, 
+        category,
+        type
+    };
+
+    api.post('/transactions', data)
 }
     
     return(
