@@ -18,7 +18,6 @@ export function NewTransactionModal({ isOpen, onRequestClose} : NewTransactionMo
 const [title, setTitle] = useState('');
 const [value, setValue] = useState(0)
 const [category, setCategory] = useState('');
-
 const [type, setType] = useState('deposit')
 
 function hadleCreateNewTransaction(event : FormEvent){
