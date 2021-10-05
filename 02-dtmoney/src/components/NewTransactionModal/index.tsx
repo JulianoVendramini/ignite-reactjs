@@ -22,15 +22,21 @@ const [amount, setAmout] = useState(0)
 const [category, setCategory] = useState('');
 const [type, setType] = useState('deposit')
 
-function hadleCreateNewTransaction(event : FormEvent){
+async function hadleCreateNewTransaction(event : FormEvent){
     event.preventDefault();
 
-    createTransaction({
+    await createTransaction({
         title,
         amount,
         category,
         type
     });
+
+    setTitle('');
+    setAmout(0);
+    setCategory('');
+    setType('deposit');
+    onRequestClose();
 }
     
     return(
